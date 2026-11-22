@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Km Valioso</title>
+</head>
+<body>
+    <main class="calculo-container">
+        <section class="calculo-card">
+            <header class="calculo-header">
+                <h1>Km <span>Valioso</span></h1>
+                <p class="slogan">Cada quilômetro conta.</p>
+                <p class="objetivo">Calcule seus custos. Descubra seus lucros.</p>
+            </header>
+            <section class="partida">
+                <h2>Vamos calcular?</h2>
+                <p>Informe os dados do seu veículo e da sua corrida.</p>
+            </section>
+            <form class="calculo-form" id="formCalculo">
+                <div class="veiculo-form">
+                    <h3>Dados do veículo</h3>
+                    <div class="combustivel">
+                        <label for="consumo">Consumo (km/L ou km/m³)</label>
+                        <input type="number" id="consumo" name="consumo" placeholder="Digite o consumo..." required step="0.01">
+                        <label for="valor-combustivel">Preço do combustível (R$/L ou R$/m³)</label>
+                        <input type="number" id="valor-combustivel" name="valor-combustivel" placeholder="Digite o valor do combustível..." required step="0.01">
+                    </div>
+                    <label for="outros-custos">Outros custos por quilômetro (R$)</label>
+                    <input type="number" id="outros-custos" name="outros-custos" placeholder="Digite os outros custos..." required step="0.01">
+                </div>
+                <div class="corrida-form">
+                    <h3>Valor recebido</h3>
+                    <label for="recebido">Valor recebido por quilômetro (R$)</label>
+                    <input type="number" id="recebido" name="recebido" placeholder="Digite o valor recebido por quilômetro..." required step="0.01">
+                </div>
+                <div class="botoes">
+                    <button type="submit" id="btnCalcular">Calcular</button>
+                    <button type="reset" id="btnLimpar">Limpar</button>
+                </div>
+            </form>
+            <section class="resultado">
+                <h2>Seu resultado</h2>
+                <div class="resultados">
+                    <div class="card-resultado">
+                        <h3>CUSTO POR KM</h3>
+                        <p id="custoPorKm">R$ 0,00</p>
+                    </div>
+                    <div class="card-resultado">
+                        <h3>LUCRO POR KM</h3>
+                        <p id="lucroPorKm">R$ 0,00</p>
+                    </div>
+                </div>
+            </section>
+            <div class="cada-100">
+                <div class="km-100">
+                    <p>A cada 100 km rodados</p>
+                    <h3>Lucro estimado:</h3>
+                </div>
+                <div class="lucro-100">
+                    <p id="cada100Km">R$ 0,00</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="rodape">
+        <p>Km Valioso - Projeto desenvolvido por Adrivan de Azevedo Santos Cabral</p>
+    </footer>
+</body>
+</html>
