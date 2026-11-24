@@ -1,0 +1,284 @@
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #111827;
+    color: #f9fafb;
+    font-family: arial, sans-serif;
+    min-height: 100vh;
+}
+
+.calculo-container {
+    width: 100%;
+    padding: 30px 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.calculo-card {
+    background-color: #1f2937;
+    width: 100%;
+    max-width: 550px;
+    padding: 30px;
+    border-radius: 16px;
+    border: 1px solid #374151;
+}
+
+.calculo-header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.calculo-header h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #f9fafb;
+}
+
+.calculo-header h1 span {
+    color: #22c55e;
+}
+
+.calculo-header .slogan {
+    color: #9ca3af;
+    font-size: 0.95rem;
+    margin-top: 5px;
+}
+
+.calculo-header .objetivo { 
+    color: #d1d5db;
+    font-size: 0.85rem;
+    margin-top: 18px;
+}
+
+.partida {
+    margin-bottom: 25px;
+}
+
+.partida h2 {
+    font-size: 1.2rem;
+    color: #f9fafb;
+    margin-bottom: 8px;
+}
+
+.partida p {
+    font-size: 0.85rem;
+    color: #9ca3af;
+    line-height: 1.5;
+}
+
+.calculo-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.veiculo-form 
+.corrida-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.calculo-form h3 {
+    font-size: 1rem;
+    color: #22c55e;
+}
+
+.calculo-form label {
+    font-size: 0.85rem;
+    color: #d1d5db;
+}
+
+.calculo-form input {
+    width: 100%;
+    padding: 13px;
+    background-color: #111827;
+    border: 1px solid #374151;
+    border-radius: 8px;
+    color: #f9fafb;
+    font-size: 0.95rem;
+    outline: none;
+}
+
+.calculo-form input::placeholder {
+    color: #6b7280;
+}
+
+.calculo-form input:focus {
+    border-color: #22c55e;
+    box-shadow: 0 0 0 2px rbg(34 197 94 / 15%);
+}
+
+.botoes {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 5px;
+}
+
+.botoes button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+#btnCalcular {
+    background-color: #22c55e;
+    color: #111827;
+}
+
+#btnCalcular:hover {
+    background-color: #16a34a;
+}
+
+#btnLimpar {
+    background-color: #374151;
+    color: #f9fafb;
+}
+
+#btnLimpar:hover {
+    background-color: #4b5563;
+}
+
+.botoes button:active {
+    transform: scale(0.98);
+}
+
+/* Resultados */
+
+.resultado {
+    margin-top: 35px;
+}
+
+.resultado h2 {
+    font-size: 1.2rem;
+    margin-bottom: 18px;
+}
+
+.resultados {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.card-resultado {
+    background-color: #111827;
+    border: 1px solid #374151;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+}
+
+.card-resultado h3 {
+    font-size: 0.8rem;
+    color: #9ca3af;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+}
+
+.card-resultado p {
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+.card-resultado:first-child p {
+    color: #f87171;
+}
+
+.card-resultado:last-child p {
+    color: #22c55e;
+}
+
+.cada-100 {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 25px;
+    padding: 20px;
+    background-color: #111827;
+    border: 1px solid #374151;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.km-100 p {
+    font-size: 0.85rem;
+    color: #9ca3af;
+    margin-bottom: 8px;
+}
+
+.km-100 h3 {
+    font-size: 1rem;
+    color: #f9fafb;
+}
+
+.lucro-100 p {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #22c55e;
+}
+
+.rodape {
+    text-align: center;
+    padding: 20px 15px;
+    margin-top: 10px;
+}
+
+.rodape p {
+    color: #6b7280;
+    font-size: 0.75rem;
+    line-height: 1.5;
+}
+
+@media (min-width: 701px) {
+
+    .calculo-container {
+        padding: 40px 20px;
+    }
+
+    .calculo-card {
+        padding: 35px;
+    }
+
+    .resultados {
+        flex-direction: row;
+    }
+
+    .card-resultado {
+        flex: 1;
+    }
+
+    .cada-100 {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+    }
+
+}
+
+@media (min-width: 901px) {
+
+    .calculo-container {
+        padding: 50px 20px;
+    }
+
+    .calculo-card {
+        max-width: 600px;
+        padding: 40px;
+    }
+
+    .calculo-header h1 {
+        font-size: 2.4rem;
+    }
+
+}
