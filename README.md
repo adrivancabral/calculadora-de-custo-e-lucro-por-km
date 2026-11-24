@@ -24,11 +24,12 @@ O Km Valioso foi desenvolvido com o objetivo de facilitar o controle dos custos 
 - [x] Campo para informar o preço do combustível.
 - [x] Campo para informar outros custos por quilômetro.
 - [x] Campo para informar o valor recebido por quilômetro.
+- [x] Layout responsivo.
 - [ ] Cálculo automático do custo por quilômetro.
 - [ ] Cálculo automático do lucro por quilômetro.
 - [ ] Estimativa de lucro a cada 100 km rodados.
 - [ ] Limpeza dos campos e resultados.
-- [ ] Layout responsivo.
+
 
 ---
 
@@ -42,7 +43,7 @@ O Km Valioso foi desenvolvido com o objetivo de facilitar o controle dos custos 
 
 ## 📸 Prévia do projeto
 
-*Imagens da aplicação serão adicionadas conforme o desenvolvimento do projeto.*
+![KmValioso](screenshots/kmValioso.png)
 
 ---
 
@@ -62,10 +63,10 @@ O Km Valioso foi desenvolvido com o objetivo de facilitar o controle dos custos 
 
 ## 🚀 Melhorias futuras
 
-- Implementar novos recursos de cálculo.
-- Melhorar a experiência visual da aplicação.
-- Adicionar suporte a diferentes tipos de combustível.
-- Aprimorar a responsividade para dispositivos móveis.
+- [ ] Implementar novos recursos de cálculo.
+- [ ] Melhorar a experiência visual da aplicação.
+- [ ] Adicionar suporte a diferentes tipos de combustível.
+- [ ] Aprimorar a responsividade para dispositivos móveis.
 
 ---
 
