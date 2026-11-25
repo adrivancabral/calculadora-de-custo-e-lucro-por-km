@@ -7,6 +7,25 @@ const custoPorKm = document.querySelector('#custoPorKm');
 const lucroPorKm = document.querySelector('#lucroPorKm');
 const cada100Km = document.querySelector('#cada100Km');
 
+function formatarInput(input) {
+    let valor = input.value.replace(/\D/g, '');
+    valor = (Number(valor) / 100).toFixed(2);
+    input.value = Number(valor).toLocaleString('pt-BR', {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
+    });
+}
+
+[valorCombustivel, outrosCustos, recebido].forEach(input => {
+    input.addEventListener('input', () => {
+        formatarInput(input);
+    });
+});
+
+function converterNumero(valor) {
+    return Number(valor.replace(/\./g, '').replace(',', '.'));
+}
+
 function formatarMoeda(valor) {
     return valor.toLocaleString('pt-BR', {
         style: "currency",
@@ -17,11 +36,11 @@ function formatarMoeda(valor) {
 botaoCalcular.addEventListener("click", (event) => {
     event.preventDefault();
     const valor1 = Number(consumo.value);
-    const valor2 = Number(valorCombustivel.value);
-    const valor3 = Number(outrosCustos.value)
+    const valor2 = converterNumero(valorCombustivel.value);
+    const valor3 = converterNumero(outrosCustos.value)
     const combustivelKm = valor2 / valor1;
     const somaVeiculo = combustivelKm + valor3;
-    const valor4 = Number(recebido.value);
+    const valor4 = converterNumero(recebido.value);
 
     if (valor1 <= 0) {
         alert('Informe um consumo válido!');
