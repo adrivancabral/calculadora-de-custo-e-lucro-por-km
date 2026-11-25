@@ -8,6 +8,8 @@
 
 Uma aplicação web simples para ajudar motoristas de aplicativo, taxistas e profissionais autônomos a calcular seus custos e descobrir quanto realmente lucram por quilômetro rodado.
 
+🌐 **Acesse a aplicação:** [Km Valioso - GitHub Pages](https://adrivancabral.github.io/km-valioso/)
+
 ---
 
 ## 🎯 Objetivo do projeto
