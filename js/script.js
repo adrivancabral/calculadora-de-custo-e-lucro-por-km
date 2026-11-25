@@ -21,3 +21,14 @@ botaoCalcular.addEventListener("click", (event) => {
 
     cada100Km.textContent = ('R$ ' + ((valor4 - somaVeiculo)* 100).toFixed(2));
 });
+
+const formEl = document.getElementById('formCalculo');
+const custoPorKmEl = document.getElementById('custoPorKm');
+const lucroPorKmEl = document.getElementById('lucroPorKm');
+const cada100KmEl = document.getElementById('cada100Km');
+
+formEl.addEventListener('reset', () => {
+    custoPorKmEl.textContent = 'R$ 0,00';
+    lucroPorKmEl.textContent = 'R$ 0,00';
+    cada100KmEl.textContent = 'R$ 0,00';
+})
