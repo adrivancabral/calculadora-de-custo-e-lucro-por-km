@@ -21,28 +21,43 @@ botaoCalcular.addEventListener("click", (event) => {
     const valor3 = Number(outrosCustos.value)
     const combustivelKm = valor2 / valor1;
     const somaVeiculo = combustivelKm + valor3;
-
     const valor4 = Number(recebido.value);
+
+    if (valor1 <= 0) {
+        alert('Informe um consumo válido!');
+        return;
+    }
+
+    if (valor2 <= 0) {
+        alert('Informe um valor válido para o combustível!');
+        return;
+    }
+
+
+    if (valor3 < 0) {
+        alert('Os outros custos não podem ser negativos!');
+        return;
+    }
+
+     if (valor4 <= 0) {
+        alert('Informe um valor recebido válido!');
+        return;
+    }
+
     const lucroPorKmTotal = (valor4 - somaVeiculo);
 
     const cada100KmTotal = ((valor4 - somaVeiculo)* 100);
 
-    custoPorKm.textContent = ('R$ ' + somaVeiculo);
-    lucroPorKm.textContent = ('R$ ' + lucroPorKmTotal);
-    cada100Km.textContent = ('R$' + cada100KmTotal); 
-
     custoPorKm.textContent = formatarMoeda(somaVeiculo);
     lucroPorKm.textContent = formatarMoeda(lucroPorKmTotal);
-    cada100Km.textContent = formatarMoeda(cada100KmTotal);
+    cada100Km.textContent = formatarMoeda(cada100KmTotal); 
+
 });
 
 const formEl = document.getElementById('formCalculo');
-const custoPorKmEl = document.getElementById('custoPorKm');
-const lucroPorKmEl = document.getElementById('lucroPorKm');
-const cada100KmEl = document.getElementById('cada100Km');
 
 formEl.addEventListener('reset', () => {
-    custoPorKmEl.textContent = 'R$ 0,00';
-    lucroPorKmEl.textContent = 'R$ 0,00';
-    cada100KmEl.textContent = 'R$ 0,00';
+    custoPorKm.textContent = 'R$ 0,00';
+    lucroPorKm.textContent = 'R$ 0,00';
+    cada100Km.textContent = 'R$ 0,00';
 })
