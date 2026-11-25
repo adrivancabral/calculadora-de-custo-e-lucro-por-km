@@ -24,17 +24,17 @@
                     <h3>Dados do veículo</h3>
                     <div class="combustivel">
                         <label for="consumo">Consumo (km/L ou km/m³)</label>
-                        <input type="number" id="consumo" name="consumo" placeholder="Digite o consumo..." required step="0.01">
+                        <input type="number" id="consumo" name="consumo" placeholder="Digite o consumo..." required step="0.01" min="0.01">
                         <label for="valor-combustivel">Preço do combustível (R$/L ou R$/m³)</label>
-                        <input type="text" inputmode="numeric" id="valor-combustivel" name="valor-combustivel" placeholder="Digite o valor do combustível..." required step="0.01">
+                        <input type="text" inputmode="numeric" id="valor-combustivel" name="valor-combustivel" placeholder="Digite o valor do combustível..." required>
                     </div>
                     <label for="outros-custos">Outros custos por quilômetro (R$)</label>
-                    <input type="text" inputmode="numeric" id="outros-custos" name="outros-custos" placeholder="Digite os outros custos..." required step="0.01">
+                    <input type="text" inputmode="numeric" id="outros-custos" name="outros-custos" placeholder="Digite os outros custos...">
                 </div>
                 <div class="corrida-form">
                     <h3>Valor recebido</h3>
                     <label for="recebido">Valor recebido por quilômetro (R$)</label>
-                    <input type="text" inputmode="numeric" id="recebido" name="recebido" placeholder="Digite o valor recebido por quilômetro..." required step="0.01">
+                    <input type="text" inputmode="numeric" id="recebido" name="recebido" placeholder="Digite o valor recebido por quilômetro..." required>
                 </div>
                 <div class="botoes">
                     <button type="submit" id="btnCalcular">Calcular</button>

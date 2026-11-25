@@ -76,7 +76,7 @@ body {
     gap: 25px;
 }
 
-.veiculo-form 
+.veiculo-form, 
 .corrida-form {
     display: flex;
     flex-direction: column;
@@ -110,7 +110,7 @@ body {
 
 .calculo-form input:focus {
     border-color: #22c55e;
-    box-shadow: 0 0 0 2px rbg(34 197 94 / 15%);
+    box-shadow: 0 0 0 2px rgba(219, 224, 221, 0.15);
 }
 
 .botoes {

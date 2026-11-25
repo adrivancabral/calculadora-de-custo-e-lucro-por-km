@@ -38,8 +38,6 @@ botaoCalcular.addEventListener("click", (event) => {
     const valor1 = Number(consumo.value);
     const valor2 = converterNumero(valorCombustivel.value);
     const valor3 = converterNumero(outrosCustos.value)
-    const combustivelKm = valor2 / valor1;
-    const somaVeiculo = combustivelKm + valor3;
     const valor4 = converterNumero(recebido.value);
 
     if (valor1 <= 0) {
@@ -52,7 +50,6 @@ botaoCalcular.addEventListener("click", (event) => {
         return;
     }
 
-
     if (valor3 < 0) {
         alert('Os outros custos não podem ser negativos!');
         return;
@@ -63,8 +60,9 @@ botaoCalcular.addEventListener("click", (event) => {
         return;
     }
 
+    const combustivelKm = valor2 / valor1;
+    const somaVeiculo = combustivelKm + valor3;
     const lucroPorKmTotal = (valor4 - somaVeiculo);
-
     const cada100KmTotal = ((valor4 - somaVeiculo)* 100);
 
     custoPorKm.textContent = formatarMoeda(somaVeiculo);
@@ -73,9 +71,9 @@ botaoCalcular.addEventListener("click", (event) => {
 
 });
 
-const formEl = document.getElementById('formCalculo');
+const form = document.getElementById('formCalculo');
 
-formEl.addEventListener('reset', () => {
+form.addEventListener('reset', () => {
     custoPorKm.textContent = 'R$ 0,00';
     lucroPorKm.textContent = 'R$ 0,00';
     cada100Km.textContent = 'R$ 0,00';
