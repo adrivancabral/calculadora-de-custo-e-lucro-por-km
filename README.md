@@ -25,10 +25,10 @@ O Km Valioso foi desenvolvido com o objetivo de facilitar o controle dos custos 
 - [x] Campo para informar outros custos por quilômetro.
 - [x] Campo para informar o valor recebido por quilômetro.
 - [x] Layout responsivo.
-- [ ] Cálculo automático do custo por quilômetro.
-- [ ] Cálculo automático do lucro por quilômetro.
-- [ ] Estimativa de lucro a cada 100 km rodados.
-- [ ] Limpeza dos campos e resultados.
+- [x] Cálculo automático do custo por quilômetro.
+- [x] Cálculo automático do lucro por quilômetro.
+- [x] Estimativa de lucro a cada 100 km rodados.
+- [x] Limpeza dos campos e resultados.
 
 
 ---
@@ -44,6 +44,7 @@ O Km Valioso foi desenvolvido com o objetivo de facilitar o controle dos custos 
 ## 📸 Prévia do projeto
 
 ![KmValioso](screenshots/kmValioso.png)
+![KmValioso2](screenshots/kmvalioso2.png)
 
 ---
 
