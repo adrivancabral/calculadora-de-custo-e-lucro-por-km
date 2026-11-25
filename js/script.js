@@ -7,6 +7,13 @@ const custoPorKm = document.querySelector('#custoPorKm');
 const lucroPorKm = document.querySelector('#lucroPorKm');
 const cada100Km = document.querySelector('#cada100Km');
 
+function formatarMoeda(valor) {
+    return valor.toLocaleString('pt-BR', {
+        style: "currency",
+        currency: "BRL"
+    })
+}
+
 botaoCalcular.addEventListener("click", (event) => {
     event.preventDefault();
     const valor1 = Number(consumo.value);
@@ -14,12 +21,19 @@ botaoCalcular.addEventListener("click", (event) => {
     const valor3 = Number(outrosCustos.value)
     const combustivelKm = valor2 / valor1;
     const somaVeiculo = combustivelKm + valor3;
-    custoPorKm.textContent = ('R$ ' + somaVeiculo.toFixed(2));
 
     const valor4 = Number(recebido.value);
-    lucroPorKm.textContent = ('R$ ' + (valor4 - somaVeiculo.toFixed(2)));
+    const lucroPorKmTotal = (valor4 - somaVeiculo);
 
-    cada100Km.textContent = ('R$ ' + ((valor4 - somaVeiculo)* 100).toFixed(2));
+    const cada100KmTotal = ((valor4 - somaVeiculo)* 100);
+
+    custoPorKm.textContent = ('R$ ' + somaVeiculo);
+    lucroPorKm.textContent = ('R$ ' + lucroPorKmTotal);
+    cada100Km.textContent = ('R$' + cada100KmTotal); 
+
+    custoPorKm.textContent = formatarMoeda(somaVeiculo);
+    lucroPorKm.textContent = formatarMoeda(lucroPorKmTotal);
+    cada100Km.textContent = formatarMoeda(cada100KmTotal);
 });
 
 const formEl = document.getElementById('formCalculo');
